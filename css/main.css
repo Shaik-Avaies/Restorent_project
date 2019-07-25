@@ -1,0 +1,531 @@
+/* CSS Document for Screens */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
+
+#page{max-width: 1200px; margin: 0 auto; position: relative;}
+/*this means any element placed in page elemnts must be positoned according to this*/
+/*if we didn't put position relative here then nav element will placed outside of page when we move it*/
+
+/* body */
+
+body{
+     font-family: 'Open Sans', sans-serif;
+     font-size: 16px;
+     font-weight: 300;
+     color:#555;
+     margin:0;
+     padding:0;
+ } 
+
+   /*  inthis font-size is in pixels. from here on we give font-size
+     in em. em are propersional measurements which give value according
+     to their base. in this base is 16px  */
+
+     /*normal weight based on the fonts that we bought from google*/
+ 
+     /*medium gray*/
+
+     /*anything inside the browser will touch the edges*/
+
+
+/* Text */
+
+h1{
+    margin:0 0 1em 0;
+    font-size: 2.8em;
+    font-weight: 700;
+}
+h2{
+    margin:0 0 .5em 0; 
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+h3{
+    margin:0 0 .5em 0;
+    font-size: 1.3em; 
+    font-weight: 700;
+}
+h4{
+    margin:0 0 1.5em 0;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+p{ 
+    margin:0 0 1em 0; 
+}
+a{
+    color:#007eff;
+}
+a:visited{
+	color:#65bfff;
+}
+a.btn{
+	font-size: 1.2em;
+	text-decoration: none;
+	color: #fff;
+	border:1px solid #fff;
+	padding : 4px 15px;
+	transition: background-color .5s;
+}
+a.btn:hover{
+	background-color: rgba(0,0,0,.3);
+}
+
+
+
+/* Header */
+header{
+    height: 430px; 
+    background:#cf0084  url(../images/res5.jpg) no-repeat center bottom; 
+    position:relative;
+ }
+/*we have four banner graphics we use them later*/
+/*here page is collapsed if we move furthur 1200px so page element is defined above*/
+header a.logo{
+	         z-index: 1; 
+	      /*this is stacking order
+	      for putting it althe way top we used it
+	      we need it at last when styling nav tag*/
+
+
+	 	/*border:2px solid black;*/
+	         position:absolute;
+             display: block; width: 160px; height: 66px;
+             background: url(../Graphics/logo.svg) no-repeat 0 0; 
+             background-size: contain;
+             top:15px; left: 20px; 
+ }
+ header a.logo span {
+ 	display: none;
+ 	/*font-size: 1em;*/
+ 	/*text-decoration: none;*/
+ 	color:#fff;
+ 	/*font-weight: 1000;*/
+ 	/*text-underline-position:none; */
+ }
+ header div.hero{	
+ 	/*border:2px solid black;*/
+ 	position:absolute;
+ 	width: 42%;	
+ 	top: 130px; left:55%;
+ }
+ header div.hero h1{
+ 	/*border:2px solid black;*/
+ 	line-height: 1em;
+ 	margin:0 0 30px 0;
+ 	color:#fff; 
+ }
+
+
+
+/* secion-all */
+section{
+   padding:0 30px;
+}
+section::after{
+	content:" ";
+	display: block;
+	clear:both;
+}
+
+
+/* secion-main */
+section.main{
+   /*background-color: #ccc;*/
+	margin-top:20px;
+	margin-bottom: 30px;
+	padding: 0;
+}
+section.main aside{
+    width:33%;
+    float: left;
+    text-align:center;
+    /*border:1px solid black;*/
+}
+section aside div{
+	/*border:1px solid black;*/
+   margin:15px;
+   background: no-repeat center top;
+   background-size: 75px 75px;
+   padding-top:85px;
+}
+section.main aside h3 a{
+	/*border:1px solid black;*/
+	color:#000;
+	text-decoration: none;
+}
+section.main aside h3 a:hover{
+  text-decoration: underline;
+}
+
+section.main aside .content.trending{
+	background-image: url(../Graphics/icon_star.svg);
+
+	/*svg:svg stands for scalable vector graphics
+	    basically it is mathematical file formate that can
+	    scable to any  size in your browser.
+	    unlike jpg, gip file in these files browser can take any 
+	    point and draw these shapes to any shapes within the page*/
+}
+section.main aside .content.find-it{
+	background-image:url(../Graphics/icon_marker.svg);
+}
+section.main aside .content.tools{
+	background-image:url(../Graphics/icon_gear.svg);
+}
+
+
+/*Main*/
+.maina{
+    color:#cc6633;
+	font-weight: 700;
+	font-size: 2em;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+.maina:hover{
+	text-decoration: none;
+	color: black;
+}
+
+/* atmosphere */
+section.atmosphere{
+	/*border:2px solid black;*/
+  background-color:#cc6633;
+  padding-top:30px;
+
+  padding-bottom:30px;
+  color:#fff;
+}
+section.atmosphere article{
+	/*border:2px solid black;*/
+	padding:0 20px 0 515px;
+	background: url(../images/res4.jpg) no-repeat 0 5px;
+	/*this will out the image above the heading*/
+	min-height: 220px;
+}
+
+
+/* how-to */
+section.how-to{
+	/*border:1px solid black;*/
+	background-color: #eee9d9;
+	position: relative;
+}
+section.how-to aside{
+	/*border:1px solid black;*/
+	width: 30%;
+	float:left;
+	margin-right:10px; 
+}
+section.how-to aside .content{
+	/*border:1px solid black;*/
+	padding:30px 30px 20px 0;
+}
+section.how-to aside .content img{
+	/*border:1px solid black;*/
+	display: block;
+	margin-bottom: 15px;
+	width: 70%;
+}
+section.how-to aside .content h4{
+	margin-bottom: 0;
+}
+section.how-to aside .content p{
+	margin-bottom: .5em;
+}
+section.how-to aside .content a{
+	/*display: inline-block;*/
+	color:#cc6633;
+	font-weight: 700;
+}
+section.how-to blockquote{
+	/*border:1px solid black;*/
+	margin:0;
+	width:32%;
+	color: #444;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	right:4%;
+}
+section.how-to blockquote p{
+	/*border:1px solid black;*/
+	margin:30px 30px 20px 50px;
+}
+section.how-to blockquote p.quote{
+  font-style: italic;
+  font-size: 1.2em;
+}
+section.how-to blockquote p.credit{
+	color:#777;
+	font-size: .9em;
+	margin-top: 0px;
+	padding-left: 20px;
+	line-height: 1.3em;
+	position:relative;
+}
+section.how-to blockquote::before {
+	 content:'\201c'; /* right quotes */
+	 color:#d2bd65;
+	 position:absolute;
+	 top:10px;
+	 left: 8px;
+	 font-size: 5em;
+	 font-family: serif; /*this willf gives us curly lookin quotes*/
+}
+section.how-to p.quote::after {
+	content:'\201d'; /*left quotes*/
+	font-family: serif;
+}
+section.how-to blockquote p.credit::before{
+	content:'\2014'; /*this is dash*/
+	position: absolute;
+	top: -1px;
+	left: 0;
+}
+
+
+/* navigation */
+nav{
+	/*border:1px solid black;*/
+   background-color: rgba(0,0,0,.65);
+   position: absolute;
+   top:0px;
+   left: 0px;
+   padding:50px 0 0 0;
+   width: 100%;
+}
+nav :: after{
+	content: '';
+	display: block;
+	clear: both;
+}
+nav ul{
+	/*border:1px solid black*/
+	list-style: none;
+	/*it will takeaway bullets*/
+	margin:0;
+	padding: 0;
+}
+
+}
+nav li:hover{
+	background-color: #2b0306;
+}
+nav ul li:hover>ul{
+	display: block;
+}
+nav ul li a{
+	display: inline-block;
+	color:#fff; /*white*/
+	padding:10px 20px;
+	text-decoration: none;
+	width: 125px;
+	/*this is the width of dropdoun menu droped from li*/
+	position: relative;
+}
+nav ul li a:visited{
+	color: #fff;
+}
+nav ul li a:hover{
+	background-color: #6d0911;
+}
+nav ul ul {
+	position: absolute;
+	top: 100%; 
+	background-color: #2b0306;
+	display: none;
+}
+nav ul ul li{
+	position: relative;
+}
+nav ul ul ul {
+	left:100%;
+	top:100%;
+}
+
+
+/* top-level */
+nav > ul{
+	padding-left: 200px;
+}
+nav > ul> li{
+	float: left;
+}
+nav > ul > li > a{
+	/*border:1px solid green;*/
+	width:auto;
+	padding: 10px 20px 15px 20px;
+}
+/*nav a[aria-haspopup="true"]{*/
+	/*border:1px solid green;*/
+/*}*/
+nav a[aria-haspopup="true"]::after{
+/*border:1px solid blue;*/
+ content: '';
+ display: block;
+ width:0px;
+ height:0px;
+ position: absolute;
+   top: 16px;
+ right: 15px;
+ border-top:4px solid transparent;
+ border-bottom: 4px solid transparent;
+ border-left: 4px solid #fff;
+}
+nav>ul>li>a[aria-haspopup="true"]::after{
+	/*border:1px solid blue;*/
+	border-left:4px solid transparent;
+	border-right:4px solid transparent;
+	border-top:4px solid #fff;
+	left: 20px;
+	right: auto; /*it will overload above right property*/
+    bottom: 6px;
+    top: auto; 
+}
+nav div{
+	border-radius: 50%;
+    padding: 10px 50px;
+	float: right;
+}
+
+/* Grids */
+.grid-container {
+ /*background-color: lightblue;*/
+  display: grid;
+  margin-top:50px;
+  margin-left:50px;
+  margin-right: 50px;
+   grid-template-columns:1fr 1fr 1fr;
+  grid-gap:10px;
+}
+
+
+.grid-item {
+  /*border: 1px solid #222;*/
+  text-align: center;
+}
+
+
+/* Footer */
+footer{
+	/*border:1px solid black;*/
+	font-size:.8em;
+	margin:40px;
+	color: #999; 
+}
+footer .content{
+    /*border:1px solid black;*/
+   	display: inline-block;
+}
+footer a{
+	/*border:1px solid black;*/
+    margin-left:30px;
+    color: #777;/* lightgray*/
+}
+footer a:visited{
+    color: #777;/* lightgray*/
+}
+footer a:hover{
+    color: #000;/* gray*/
+}
+
+
+.socialmediaicons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socialmediaicons ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.socialmediaicons ul li img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+
+
+/* Media Queries */
+/*
+@media screen and (max-width: 1000px){
+     h1{
+     	font-size: 2.4em;
+     }  
+   
+     header div.hero{
+     	left: 56%;
+     }
+     header div.hero h1{
+     	margin-bottom: 20px;
+     }
+   
+     section.atmosphere article{
+     	padding-left: 400px;
+     	background-size: 375px auto;
+   
+     }
+}
+
+@media screen and (max-width: 825px){
+	h1{font-size: 2.2em;}
+	
+	header{
+		height: 300px;
+ 		background-image: url(../graphics/banner_825.jpg);
+        }
+       header div.hero{
+       	top:120px;
+       	left: 48%;
+       }
+    
+       section.atmoshpere article{
+       	padding-left: 325px;
+       	background-size: 300px auto;	
+       }
+    
+       section.how-to blockquote p.quote{
+         font-size: 1.1em;
+         line-height: 1.2em;
+       }
+       sectioon.how-to blockquote p.credit{
+       	font-size: 1.85em;
+       }
+ }
+
+ @media screen and (max-width: 760px){
+ h1{
+ 	font-size: 1.8em;
+ }
+ h2{
+ 	font-size: 1.4em;
+ }
+ h3{
+ 	font-size: 1.1em;
+ }
+a.btn{
+	font-size: 1em;
+ }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
